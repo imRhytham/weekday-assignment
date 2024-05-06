@@ -14,58 +14,12 @@ import BoltIcon from "@mui/icons-material/Bolt";
 
 const classes = {
 	root: {
+		borderRadius: 2,
 		maxWidth: 375,
 		"&:hover": {
 			boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.2)",
 			cursor: "pointer",
 		},
-	},
-	companyName: {
-		fontSize: 18,
-		fontWeight: "bold",
-		color: "#a3a3a3",
-		textTransform: "capitalize",
-	},
-	title: {
-		fontSize: 18,
-		color: "#333",
-		textTransform: "capitalize",
-	},
-	location: {
-		fontSize: 16,
-		color: "#333",
-		marginBottom: "8px",
-		textTransform: "capitalize",
-	},
-	salary: {
-		fontSize: 14,
-		color: "#4caf50",
-		marginBottom: "8px",
-	},
-	descContainer: {
-		maxHeight: 270,
-		overflow: "hidden",
-		textAlign: "justify",
-		position: "relative",
-	},
-	description: {
-		fontSize: 14,
-		color: "#666",
-		marginBottom: "16px",
-	},
-	gradientOverlay: {
-		position: "absolute",
-		bottom: 5,
-		left: 0,
-		width: "100%",
-		height: 40,
-		backgroundImage: "linear-gradient(transparent, white)",
-	},
-	button: {
-		marginRight: "8px",
-		backgroundColor: "#55EFC4",
-		color: "#000",
-		mt: 2,
 	},
 };
 
@@ -197,7 +151,14 @@ const JobCard = ({ job }) => {
 						cursor: "pointer",
 					}}
 				>
-					<Button onClick={toggleExpand}>
+					<Button
+						onClick={toggleExpand}
+						sx={{
+							"&:focus": {
+								outline: "none",
+							},
+						}}
+					>
 						{expanded ? "Show Less" : "Show More"}
 					</Button>
 				</Typography>
@@ -220,6 +181,7 @@ const JobCard = ({ job }) => {
 						padding: "0.5rem",
 						"&:hover": {
 							backgroundColor: "#55EFC4",
+							color: "black",
 						},
 					}}
 				>

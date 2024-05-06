@@ -25,7 +25,7 @@ const MultipleSelectDropDown = ({
 					placeholder={placeholder}
 					renderValue={(selected) => (
 						<Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}>
-							{selected.map((value) => (
+							{selected?.map((value) => (
 								<Chip
 									size="small"
 									key={value}
