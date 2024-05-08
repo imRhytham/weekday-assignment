@@ -1,8 +1,33 @@
-# React + Vite
+# Weekday Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+To create a candidate application platform that allows users to view job listings, filter jobs based on various criteria, and implement infinite scroll for a seamless browsing experience.
 
-Currently, two official plugins are available:
+## Run Locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Clone the project
+
+```bash
+  git clone https://github.com/imRhytham/weekday-assignment.git
+```
+
+Go to the project directory
+
+```bash
+  cd weekday-assignment
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
+
+## Demo
+
+https://weekday-assignment-neon.vercel.app/
