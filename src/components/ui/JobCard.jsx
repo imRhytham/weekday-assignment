@@ -15,7 +15,7 @@ import BoltIcon from "@mui/icons-material/Bolt";
 const classes = {
 	root: {
 		borderRadius: 2,
-		maxWidth: 375,
+		width: 375,
 		"&:hover": {
 			boxShadow: "0px 0px 10px 0px rgba(0,0,0,0.2)",
 			cursor: "pointer",

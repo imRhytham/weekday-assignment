@@ -4,10 +4,12 @@ function useInfiniteScroll(cb) {
 	useEffect(() => {
 		//this will be triggered once the user scroll to bottom
 		function handleScroll() {
-			if (
-				Math.ceil(window.innerHeight + document.documentElement.scrollTop) ===
-				Math.floor(document.documentElement.offsetHeight)
-			) {
+			const scrollHeight = document.documentElement.scrollHeight;
+			const scrollTop =
+				document.documentElement.scrollTop || document.body.scrollTop;
+			const clientHeight = document.documentElement.clientHeight;
+
+			if (scrollHeight - scrollTop - clientHeight < 50) {
 				cb();
 			}
 		}

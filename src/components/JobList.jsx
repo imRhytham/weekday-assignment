@@ -8,10 +8,11 @@ import useInfiniteScroll from "../hooks/useInfiniteScroll";
 
 const JobList = () => {
 	const dispatch = useDispatch();
-	const { items, offset, loading } = useSelector((state) => state.jobs);
+
+	const { offset, loading, filteredItems } = useSelector((state) => state.jobs);
 
 	useEffect(() => {
-		dispatch(fetchJobs({ limit: 5, offset: offset }));
+		dispatch(fetchJobs({ limit: 10, offset: offset }));
 	}, []);
 
 	useInfiniteScroll(() => {
@@ -21,13 +22,13 @@ const JobList = () => {
 	return (
 		<>
 			<Grid container spacing={{ xs: 2, md: 3 }} p={2}>
-				{items.map((item) => (
-					<Grid item xs={12} sm={6} md={3} key={item.jdUid}>
+				{filteredItems.map((item) => (
+					<Grid item xs={12} sm={6} lg={4} key={item.id}>
 						<JobCard job={item} />
 					</Grid>
 				))}
-				{loading && <Loading />}
 			</Grid>
+			{loading && <Loading />}
 		</>
 	);
 };
